@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Surprise 🎁</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hope you like this</h1>
+        <img id="surpriseImage" src="WhatsApp%20Image%202026-07-01%20at%202.57.19%20PM.jpeg" class="surprise-photo" alt="Surprise picture">
+        <p class="wish">Happy Birthday Sani</p>
+        <button onclick="window.location.href='index.html'">Back</button>
+    </div>
+
+    <script>
+        const images = [
+            'WhatsApp Image 2026-07-01 at 2.57.19 PM.jpeg',
+            'WhatsApp Image 2026-07-01 at 2.57.20 PM.jpeg',
+            'WhatsApp Image 2026-07-01 at 2.57.21 PM.jpeg'
+        ];
+        let currentIndex = 0;
+        const imageElement = document.getElementById('surpriseImage');
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            imageElement.src = images[currentIndex];
+        }, 5000);
+    </script>
+</body>
+</html>
